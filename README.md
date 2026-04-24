@@ -8,10 +8,10 @@ To be able to play this game you have to have node + npm installed (to check if 
 
 If you do not have it installed, complete instructions below:
 
-    Download the installer: Go to the official Node.js website and download the LTS (Long-Term Support) version for your operating system (Windows, macOS, or Linux).
-    Run the installer: Open the downloaded file and follow the setup wizard prompts.
-    Ensure defaults are selected: Make sure the option to include the npm package manager is selected, which is typically the default.
-    Complete the installation: Click "Install" and then "Finish" when done. 
+Download the installer: Go to the official Node.js website and download the LTS (Long-Term Support) version for youroperating system (Windows, macOS, or Linux).
+Run the installer: Open the downloaded file and follow the setup wizard prompts.
+Ensure defaults are selected: Make sure the option to include the npm package manager is selected, which is typically the default.
+Complete the installation: Click "Install" and then "Finish" when done. 
 
 If you have node and npm installed, run these commands:
 
