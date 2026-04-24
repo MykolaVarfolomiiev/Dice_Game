@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("images/Brightsky.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-size: 60px;
+}
+
+.imgLogo {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+img {
+    width: 250px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.cT {
+    margin-top: 4px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 55px;
+    color: #f69c14;
+    letter-spacing: 2px;
+    text-align: center;
+
+    text-shadow:
+        -3px -3px 0 #0852e7,
+        3px -3px 0 #1b4fb8,
+        3px 3px 0 #1b4fb8,
+        3px 3px 0 #1b4fb8,
+        0px 6px 0 #123a8f;
+}
+
+.c {
+    margin-top: 4px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 34px;
+    color: #f69c14;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow:
+        3px 3px 0 #1b4fb8,
+        3px 3px 0 #1b4fb8,
+        0px 3px 0 #123a8f;
+}
+
+li {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+    color: #1b4fb8;
+    text-shadow: 2px 2px 0 #f69c14;
+    letter-spacing: 2px;
+}
+
+#rules {
+    margin-bottom: 150px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(16px, 4vm, 32px);
+    border-radius: 15px;
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); */
+}
+
+.dice {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.dice img {
+    width: 120px;
+    height: 120px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.guess {
+    font-size: 18px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 5px 10px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #5fd84d, #2fa63b);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow:
+        0 6px 0 #1e7c2a,
+        0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+input,
+select {
+    color: #123a8f;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    padding: 12px 16px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+}
+
+input {
+    background-color: #e6c20e;
+}
+
+/* Hover effect */
+input:hover,
+select:hover {
+    box-shadow: 0 6px 18px rgba(12, 65, 213, 0.25);
+}
+
+.card {
+    padding-left: 15px;
+    position: relative;
+    width: 90%;
+    border-radius: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+        0 6px 0 #3aa01e,
+        0 15px 30px #000;
+    transition: all 0.3s ease;
+    margin-bottom: 1em;
+    color: #f69c14;
+    text-shadow: 2px 2px 0 #123a8f;
+}
+
+.small {
+    color: #fff;
+    font-size: 14px;
+    margin: 1px 0;
+}
+
+.bold {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 18px;
+    color: #f69c14;
+    font-weight: 500;
+    text-shadow: 2px 2px 0 #123a8f;
+}
+
+.hide {
+    display: none;
+}
+
+.leaveBtn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(to bottom, #ff5e5e, #cc2e2e);
+    box-shadow:
+        0 4px 0 #8f1a1a,
+        0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.leaveBtn:hover {
+    transform: translateY(-2px);
+}
+
+
+#gameLayout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#gameBody {
+    flex: 4;
+}
+
+#scoreboardWrapper,
+.Player {
+    flex: 1;
+    position: sticky;
+    top: 10px;
+    background: url(images/Bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow:
+        0 8px 0 #e6c20e,
+        0 15px 30px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 100%;
+    margin: 1%;
+    text-align: left;
+    color:  #f69c14;
+    text-shadow: 2px 2px 0 #123a8f;
+}
+
+#scoreboardWrapper {
+   flex: 1;
+}
+
+.Player {
+    flex: 3;
+}
+
+.centerPAS {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#sumSelect {
+    width: 5em;
+    font-size: 16px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 2px solid #123a8f;
+    background-color: #e6c20e;
+    color: #000;
+    outline: none;
+    transition: all 0.3s ease;
+}

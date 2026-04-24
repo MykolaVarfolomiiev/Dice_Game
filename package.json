@@ -1,0 +1,25 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
+    "xss": "^1.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbcc-wmad/websockets-team-project-src_4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nbcc-wmad/websockets-team-project-src_4/issues"
+  },
+  "homepage": "https://github.com/nbcc-wmad/websockets-team-project-src_4#readme"
+}

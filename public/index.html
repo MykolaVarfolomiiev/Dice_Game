@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Sum Guessing Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1 id="title" class="cT">Loading...</h1>
+
+      <div class="imgLogo" id="logo">
+        <img src="images/diceLogo.png" alt="Dice Game Logo" class="" />
+      </div>
+      <h3 id="title2" class="c"></h3>
+
+      <section class="c" id="user">
+        <input id="nameInput" placeholder="Your name" />
+        <button id="saveNameBtn">Join Game</button>
+      </section>
+
+      <div id="rules">
+        <h2 class="c">Game Rules:</h2>
+
+        <ul>
+          <li>
+            To start the game, you are required to enter your name and press the
+            "Join Game" button.
+          </li>
+          <li>
+            You will see a countdown timer - this is the time you have to make
+            your guess for the sum of two dice for the NEXT ROUND.
+          </li>
+          <li>
+            Choose a number between 2 and 12 from the dropdown list above the
+            card/field that displays your name and statistics.
+          </li>
+          <li>
+            Press the "My Guess" button every time you want to join the current
+            round. The status indicator will change from grey to green, and the
+            status will update to "Joined this round" status update, indicating
+            that you have joined the current round.
+          </li>
+          <li>
+            You can change your guess sum at any point during the round while
+            the timer is running
+          </li>
+          <li>
+            After the round ends (the timer runs out), your personal statistics
+            will show whether you won or lost the round. The "Wins" count
+            increases only if you guessed correctly; otherwise, only the "Total
+            rounds" count increases.
+          </li>
+          <li>
+            The next round starts automatically, and the timer begins counting
+            down again. You must quickly make your next guess and join the
+            round, or you can choose to do nothing and watch other players.
+          </li>
+          <li>
+            You can leave the game at any time by pressing the "Leave Game"
+            button.
+          </li>
+        </ul>
+
+      </div>
+
+      <div id="gameLayout" class="hide">
+        <div id="gameBody" class="hide">
+          <h2 class="c">Guess The Next Sum:</h2>
+          <h3 id="countdown" class="c">Round ends in: --s</h3>
+
+          <section class="dice">
+            <img class="img1" src="images/dice1.png" alt="Dice 1" />
+            <img class="img2" src="images/dice1.png" alt="Dice 2" />
+          </section>
+
+          <section class="c guess">
+            <label for="sumSelect" class="c"
+              ><strong>Guess the sum:</strong></label
+            >
+            <select id="sumSelect"></select>
+
+            <button id="myGuessBtn">My Guess</button>
+            <h3 class="sp">(You must click the "My Guess" button each round to join)</h3>
+          </section>
+
+          <div class="centerPAS">
+          <div id="scoreboardWrapper" class="hide">
+            <h3>Scoreboard</h3>
+            <div id="scoreboard"></div>
+          </div>
+          
+          <section class="Player">
+            <h3>Players</h3>
+            <div id="players"></div>
+          </section>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
